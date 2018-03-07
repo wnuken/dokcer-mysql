@@ -6,7 +6,7 @@
 
 ## 2. Conectar a la base de datos:
 
-Hosts: localhost (o IP) Port: 3306
+Host: localhost (o IP) Port: 3306
 
 _Ingresar a mysql desde consola_
 
