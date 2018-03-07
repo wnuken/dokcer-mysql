@@ -8,9 +8,9 @@ Port: 3306
 
 	* Ingresar a mysql
 
-<addr> sudo docker exec -it mysqlservice mysql -u root -p
+sudo docker exec -it mysqlservice mysql -u root -p <addr>
 
 	* Dar permisos al usuario
 
-<addr> GRANT ALL ON *.* TO 'developer'@'%' WITH GRANT OPTION;
-<addr> exit;
+GRANT ALL ON *.* TO 'developer'@'%' WITH GRANT OPTION; <addr> 
+exit; <addr> 
