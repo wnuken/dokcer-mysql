@@ -1,18 +1,20 @@
 # MySQL
 
-##1. Conetar a la base de datos:
+## 1. Inicar el servicio
 
-Hosts: localhost (or IP)
+	sudo docker-compose up
 
-Port: 3306
+## 2. Conectar a la base de datos:
 
-##2. Dar permisos a usuario
+Hosts: localhost (o IP) Port: 3306
 
-_Ingresar a mysql_
+_Ingresar a mysql desde consola_
 
-	* sudo docker exec -it mysqlservice mysql -u root -p <addr>
+	sudo docker exec -it mysqlservice mysql -u root -p
+
+## 3. Dar permisos a usuario
 
 _Dar permisos al usuario_
 
-	GRANT ALL ON *.* TO 'developer'@'%' WITH GRANT OPTION; <addr> 
-exit; <addr> 
+	GRANT ALL ON *.* TO 'developer'@'%' WITH GRANT OPTION; 
+	exit;
