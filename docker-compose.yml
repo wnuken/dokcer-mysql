@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    mysqldb:
+        image: mysql
+        container_name: mysqlservice
+        ports:
+            - "3306:3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=secret
+            - MYSQL_USER=developer
+            - MYSQL_PASSWORD=developer
+        volumes:
+            - ./database/config:/etc/mysql
+            - ../mysqlbd/data:/var/lib/mysql
+            - ./database/logs/:/var/log/mysql
