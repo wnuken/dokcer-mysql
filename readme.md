@@ -12,9 +12,11 @@ _Ingresar a mysql desde consola_
 
 	sudo docker exec -it mysqlservice mysql -u root -p
 
-## 3. Dar permisos a usuario
+## 3. Usuarios
 
-_Dar permisos al usuario_
+_Crear y dar permisos al usuario_
 
-	GRANT ALL ON *.* TO 'developer'@'%' WITH GRANT OPTION; 
+	CREATE USER 'developer'@'%' IDENTIFIED BY 'd3v3l0p3r';
+	GRANT ALL ON *.* TO 'developer'@'%' WITH GRANT OPTION;
+	FLUSH PRIVILEGES;
 	exit;
