@@ -12,3 +12,9 @@ services:
             - ./database/config:/etc/mysql
             - ../mysqlbd/data:/var/lib/mysql
             - ./database/logs/:/var/log/mysql
+        networks:
+            - custom
+
+networks:
+    custom:
+        external: true
