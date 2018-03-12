@@ -1,4 +1,9 @@
-version: '3'
+version: '3.5'
+
+networks:
+    servicesnet:
+        name: networkservices
+        driver: bridge
 
 services:
     mysqldb:
@@ -13,8 +18,4 @@ services:
             - ../mysqlbd/data:/var/lib/mysql
             - ./database/logs/:/var/log/mysql
         networks:
-            - custom
-
-networks:
-    custom:
-        external: true
+            - servicesnet
