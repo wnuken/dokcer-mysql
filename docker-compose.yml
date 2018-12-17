@@ -7,7 +7,7 @@ networks:
 
 services:
     mysqldb:
-        image: mysql
+        image: mysql:5.7.24
         container_name: mysqlservice
         ports:
             - "3306:3306"
